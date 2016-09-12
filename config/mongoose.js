@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-var uri = "mongodb://localhost/hr";
+var uri = process.env.MONGOLAB_URI || "mongodb://localhost/hr";
 
 
 module.exports = function(){
