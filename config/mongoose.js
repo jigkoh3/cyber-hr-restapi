@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-var uri = process.env.MONGOLAB_URI;
+var uri = "";
 
 
 module.exports = function(){
