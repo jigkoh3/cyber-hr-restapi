@@ -8,7 +8,8 @@ module.exports = function(){
 		console.log();
 	});
 
-    require('../app/models/index.model');
+    require('../app/models/employee.model');
+    require('../app/models/benefitsMaster.model');
 
 	return db;
 }

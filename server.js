@@ -19,5 +19,5 @@ var express = require("./config/express");
 var db = mongoose();
 var app = express();
 
-app.listen(3100);
+app.listen(8080);
 console.log("Server is running http://localhost:3100");

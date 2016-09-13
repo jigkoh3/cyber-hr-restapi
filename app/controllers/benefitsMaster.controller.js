@@ -1,5 +1,5 @@
 var employeeData = require('mongoose').model('employeeData');
-exports.listUser = function(req, res, next) {
+exports.listEmployee = function(req, res, next) {
     employeeData.find({}, function(err, employees) {
         if (err) {
             console.log(err);
@@ -44,7 +44,7 @@ exports.delete = function(req, res, next) {
     });
 };
 
-exports.getUserByID = function(req, res, next, _id) {
+exports.getBnfByID = function(req, res, next, _id) {
     employeeData.findById(_id, function(err, employees) {
         if (err) {
             console.log(err);
@@ -56,8 +56,11 @@ exports.getUserByID = function(req, res, next, _id) {
     });
 };
 
-exports.createUser = function(req, res, next) {
+exports.createBenefists = function(req, res, next) {
+    console.log(req.body);
     var EmployeeData = new employeeData(req.body);
+
+    console.log('================================');
     console.log(EmployeeData);
     EmployeeData.save(function(err) {
         if (err) {
